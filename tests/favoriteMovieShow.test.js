@@ -1,13 +1,14 @@
-import FavoriteMovieSearchView from '../src/scripts/views/pages/liked-movies/favorite-movie-search-view';
 import FavoriteMovieShowPresenter from '../src/scripts/views/pages/liked-movies/favorite-movie-show-presenter';
+import FavoriteMovieView from '../src/scripts/views/pages/liked-movies/favorite-movie-view';
  
 describe('Showing all favorite movies', () => {
   let view;
  
   const renderTemplate = () => {
-    view = new FavoriteMovieSearchView();
-    document.body.innerHTML = view.getFavoriteMovieTemplate();
+    view = new FavoriteMovieView();
+    document.body.innerHTML = view.getTemplate();
   };
+ 
   beforeEach(() => {
     renderTemplate();
   });

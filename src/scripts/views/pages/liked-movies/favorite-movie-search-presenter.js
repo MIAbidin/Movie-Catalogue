@@ -26,7 +26,9 @@ class FavoriteMovieSearchPresenter {
       foundMovies = await this._favoriteMovies.getAllMovies();
     }
  
-    _showFoundMovies(foundMovies);
+    _showFoundMovies(movies) {
+      this._view.showFavoriteMovies(movies);
+    }
   }
  
   get latestQuery() {
